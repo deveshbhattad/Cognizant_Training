@@ -1,0 +1,181 @@
+﻿@model TMS_MAIN.Models.BankAccountViewModel
+@{
+    ViewData["Title"] = "Bank Accounts";
+    Layout = "~/Views/Shared/_TreasurerLayout.cshtml";
+}
+
+@section Styles {
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=wrap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></style>
+    <link href="~/css/treasurer-dashboard.css" rel="stylesheet" />
+    <style>
+
+        .action-buttons {
+            white-space: nowrap;
+        }
+
+            .action-buttons .btn {
+                margin-right: 3px;
+            }
+
+        .btn-group {
+            display: flex;
+            gap: 3px;
+        }
+
+        .btn-info {
+            color: #fff;
+            background-color: #17a2b8;
+            border-color: #17a2b8;
+        }
+
+            .btn-info:hover {
+                color: #fff;
+                background-color: #138496;
+                border-color: #117a8b;
+            }
+
+        .btn i {
+            margin-right: 3px;
+        }
+
+        #box {
+            padding: 60px;
+            margin-top: 50px; /* Adjusted margin-top to prevent overlap with fixed navbar */
+        }
+
+        /* Your other existing styles... */
+    </style>
+}
+
+
+
+<div id="box" class="container-fluid">
+    <div class="row mb-4">
+        <div class="col">
+            <h1>Bank Accounts</h1>
+            @* <div class="timestamp-info"> *@
+            @*     <p class="mb-0"> *@
+            @*         <i class="bi bi-person"></i> Current User's Login: @Model.CurrentUser *@
+            @*     </p> *@
+            @*     <p class="mb-0"> *@
+            @*         <i class="bi bi-clock"></i> Current Date and Time (UTC - YYYY-MM-DD HH:MM:SS formatted): @Model.CurrentDateTime *@
+            @*     </p> *@
+            @* </div> *@
+                
+        </div>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle-fill"></i> @TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="bi bi-exclamation-triangle-fill"></i> @TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="row mb-3">
+        <div class="col">
+            <div class="d-flex gap-2">
+                <a asp-action="Add" class="btn btn-success">
+                    <i class="bi bi-plus-circle"></i> Add New Account
+                </a>
+                <a asp-controller="Treasurer" asp-action="TreasurerDashboard" class="btn btn-secondary">
+                    <i class="bi bi-arrow-left"></i> Back to Dashboard
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Account ID</th>
+                    <th>Bank Name</th>
+                    <th>Account Number</th>
+                    <th>Account Type</th>
+                    <th>Balance</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model?.BankAccounts != null && Model.BankAccounts.Any())
+                {
+                    foreach (var item in Model.BankAccounts)
+                    {
+                        <tr>
+                            <td>@item.AccountId</td>
+                            <td>@item.BankName</td>
+                            <td>@item.AccountNumber</td>
+                            <td>@item.AccountType</td>
+                            <td>@item.Balance.ToString("C")</td>
+                            <td class="action-buttons">
+                                <div class="btn-group" role="group">
+                                    <a asp-action="Edit" asp-route-id="@item.AccountId" class="btn btn-primary btn-sm me-1">
+                                        <i class="bi bi-pencil"></i> Edit
+                                    </a>
+                                    <a asp-action="Reconcile" asp-route-id="@item.AccountId" class="btn btn-info btn-sm me-1">
+                                        <i class="bi bi-check2-circle"></i> Reconcile
+                                    </a>
+                                    <form asp-action="Delete" asp-route-id="@item.AccountId" method="post" class="d-inline">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-danger btn-sm"
+                                                onclick="return confirm('Are you sure you want to delete this account?');">
+                                            <i class="bi bi-trash"></i> Delete
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="6" class="text-center">
+                            <p class="my-3">No bank accounts found. Click the "Add New Account" button to create one.</p>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Auto-hide alerts after 5 seconds
+            setTimeout(function () {
+                $('.alert').alert('close');
+            }, 5000);
+
+            // Confirm delete action
+            $('.btn-danger').click(function (e) {
+                if (!confirm('Are you sure you want to delete this account?')) {
+                    e.preventDefault();
+                }
+            });
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/treasurer-dashboard.js"></script>
+                    </script>
+}

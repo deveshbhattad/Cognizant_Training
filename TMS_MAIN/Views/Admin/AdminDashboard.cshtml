@@ -1,0 +1,70 @@
+﻿@model TMS_MAIN.Models.User;
+@{
+    ViewData["Title"] = "Admin Dashboard";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+    @section Styles {
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=wrap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link href="~/css/admin-dashboard.css" rel="stylesheet" />
+}
+
+    <div class="container-fluid dashboard-container">
+        <div class="welcome-section">
+            <h1>Admin Control Panel</h1>
+            <p>Manage users, oversee system health, and ensure seamless operations.</p>
+        </div>
+
+    @* Admin-specific cards - adjusted styling and buttons *@
+    <div class="row justify-content-center">
+        <div class="col-md-10 mx-auto">
+            <div class="dashboard-card">
+                <div class="card-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h3>Add a new Treasurer</h3>
+                <p>Register new treasurer accounts and set their initial access parameters.</p>
+                <a href="@Url.Action("Register", "User")" class="btn-enhanced">Register Treasurer</a>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-10 mx-auto">
+            <div class="dashboard-card">
+                <div class="card-icon">
+                    <i class="fas fa-users-cog"></i>
+                </div>
+                <h3>Manage Treasurers</h3>
+                <p>View, update, or deactivate treasurer accounts and their associated data.</p>
+                <a href="@Url.Action("UserList", "User")" class="btn-enhanced">Manage Treasurers</a>
+            </div>
+        @* <div class="col-md-3"> *@
+        @*     <div class="dashboard-card"> *@
+        @*         <h3>Ethics and compliance</h3> *@
+        @*         <p>Track ethics and compliance</p> *@
+        @*         <button class="btn btn-info">Click</button> *@
+        @* </div> *@
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-10 mx-auto">
+            <div class="dashboard-card">
+                <div class="card-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h3>View Reports Status</h3>
+                <p>Access comprehensive reports status on treasurer activities and system performance.</p>
+                <a href="@Url.Action("AdminReports", "Admin")" class="btn-enhanced">Reports</a>
+            </div>
+        </div> 
+    </div>
+</div>
+
+    @section Scripts {
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script src="~/js/admin-dashboard.js"></script>
+
+    }

@@ -1,0 +1,37 @@
+﻿
+
+@model Bloggie.MVC.Models.ViewModels.HomeViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div>
+    @if(Model!=null && Model.Tags.Any())
+    {
+        foreach(var tag in Model.Tags)
+        {
+            <h1>@tag.Name</h1>
+        }
+    }
+    </div>
+<div class="container">
+    @if(Model!=null && Model.BlogPosts.Any()){
+        foreach(var blogPost in Model.BlogPosts)
+        {
+            <h1>@blogPost.Heading</h1>
+        
+        @foreach(var item1 in blogPost.Tags)
+        {
+            <h1>@item1.Name</h1>
+            
+        }
+            <a class="btn btn-dark" asp-area="" asp-controller="Blog" asp-action="Index" asp-route-urlHandle="@blogPost.Urlhandle">Read more</a>
+        }
+    
+    }
+</div>

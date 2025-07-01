@@ -1,0 +1,189 @@
+﻿
+@* @model TMS_MAIN.Models.ReconciliationResult
+
+@{
+    ViewData["Title"] = "Reconciliation Result";
+}
+
+<h2>Reconciliation Result</h2>
+
+<p><strong>Bank:</strong> @Model.BankName</p>
+<p><strong>Account Number:</strong> @Model.AccountNumber</p>
+<p><strong>User:</strong> @Model.CurrentUser</p>
+<p><strong>Date:</strong> @Model.CurrentDateTime</p>
+<p><strong>Total Discrepancy:</strong> @Model.TotalDiscrepancy.ToString("C")</p>
+<br />
+
+<h3>Matched Transactions</h3>
+<br />
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tx in Model.MatchedTransactions)
+        {
+            <tr>
+                <td>@tx.TransactionDate.ToShortDateString()</td>
+                <td>@tx.TransactionType</td>
+                <td>@tx.Amount.ToString("C")</td>
+                <td>@tx.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<h3>Unmatched Bank Transactions</h3>
+<br />
+<table class="table table-warning">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tx in Model.UnmatchedBankTransactions)
+        {
+            <tr>
+                <td>@tx.TransactionDate.ToShortDateString()</td>
+                <td>@tx.TransactionType</td>
+                <td>@tx.Amount.ToString("C")</td>
+                <td>@tx.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<h3>Unmatched Internal Transactions</h3>
+<br />
+<table class="table table-danger">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var tx in Model.UnmatchedInternalTransactions)
+        {
+            <tr>
+                <td>@tx.TransactionDate.ToShortDateString()</td>
+                <td>@tx.TransactionType</td>
+                <td>@tx.Amount.ToString("C")</td>
+                <td>@tx.Description</td>
+            </tr>
+        }
+    </tbody>
+</table> *@
+@model TMS_MAIN.Models.ReconciliationResult
+
+@{
+    ViewData["Title"] = "Reconciliation Result";
+}
+<div class="container-fluid">
+    <div>
+        <h2 class="text-center">Reconciliation Result</h2>
+
+        <p><strong>Bank:</strong> @Model.BankName</p>
+        <p><strong>Account Number:</strong> @Model.AccountNumber</p>
+        <p><strong>User:</strong> @Model.CurrentUser</p>
+        <p><strong>Date:</strong> @Model.CurrentDateTime</p>
+        <p><strong>Total Discrepancy:</strong> @Model.TotalDiscrepancy.ToString("C")</p>
+        <br />
+
+    </div>
+    
+<div>
+    <h3>Matched Transactions</h3>
+    <br />
+    <table class="table table-responsive table-dark">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tx in Model.MatchedTransactions)
+            {
+                <tr>
+                    <td>@tx.TransactionDate.ToShortDateString()</td>
+                    <td>@tx.TransactionType</td>
+                    <td>@tx.Amount.ToString("C")</td>
+                    <td>@tx.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
+<div>
+    <h3>Unmatched Bank Transactions</h3>
+    <br />
+    <table class="table table-warning table-responsive">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tx in Model.UnmatchedBankTransactions)
+            {
+                <tr>
+                    <td>@tx.TransactionDate.ToShortDateString()</td>
+                    <td>@tx.TransactionType</td>
+                    <td>@tx.Amount.ToString("C")</td>
+                    <td>@tx.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<br />
+<div>
+    <h3>Unmatched Internal Transactions</h3>
+    <br />
+    <table class="table table-danger table-responsive">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tx in Model.UnmatchedInternalTransactions)
+            {
+                <tr>
+                    <td>@tx.TransactionDate.ToShortDateString()</td>
+                    <td>@tx.TransactionType</td>
+                    <td>@tx.Amount.ToString("C")</td>
+                    <td>@tx.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<br />
+
+
+</div>

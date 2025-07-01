@@ -1,0 +1,190 @@
+﻿/* Core Layout & Background */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #e0f2f7 0%, #a7d9f2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 0.85rem; /* Even smaller base font size */
+}
+
+.register-container {
+    max-width: 520px; /* Even narrower max-width for a very compact look */
+    padding: 5px; /* Reduced minimal padding */
+}
+
+/* Card Styling */
+.register-card {
+    background: white;
+    border-radius: 10px; /* Slightly less rounded corners */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-out; /* Faster fade-in */
+}
+
+/* Header Section */
+.register-header {
+    background: linear-gradient(135deg, navy 0%, #0277bd 100%); /* Medium blue header */
+    color: white;
+    padding: 8px 15px; /* Reduced padding */
+    text-align: center;
+    font-size: 1.6rem; /* Slightly smaller header font */
+    font-weight: 700;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Thinner border */
+    border-top-left-radius: 10px; /* Match card border radius */
+    border-top-right-radius: 10px; /* Match card border radius */
+}
+
+.register-title {
+    font-size: 1.5rem; /* Smaller title */
+    font-weight: 700;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .register-title i {
+        font-size: 1.2rem; /* Smaller icon */
+        margin-right: 0.5rem; /* Adjust icon spacing */
+    }
+
+
+/* Body Section (Form) */
+.register-body {
+    padding: 1rem 1.5rem; /* Reduced vertical padding, kept horizontal */
+}
+
+.form-label.compact-label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 0.2rem; /* Reduced margin below labels */
+    font-size: 0.8rem; /* Even smaller label font size */
+}
+
+.form-control.form-control-sm {
+    padding: 0.4rem 0.6rem; /* Even smaller padding */
+    border-radius: 5px; /* Slightly less rounded inputs */
+    font-size: 0.85rem; /* Match base font size for inputs */
+}
+
+.form-control:focus {
+    border-color: #0277bd; /* Match header blue */
+    box-shadow: 0 0 0 0.15rem rgba(2, 119, 189, 0.2); /* Smaller shadow with header color */
+}
+
+.form-check-input:checked {
+    background-color: #0277bd; /* Match header blue */
+    border-color: #0277bd; /* Match header blue */
+}
+
+.text-danger.compact-text-danger {
+    font-size: 0.7rem; /* Even smaller error text */
+    margin-top: 0.05rem; /* Minimal margin below input field */
+}
+
+/* Specific styling for the validation summary block */
+.validation-summary-errors.compact-alert {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px; /* Match inputs */
+    padding: 0.6rem; /* Reduced padding */
+    color: #721c24;
+    list-style-type: none;
+    padding-left: 0.6rem;
+    font-size: 0.75rem; /* Smaller font for summary */
+    margin-bottom: 0.8rem; /* Reduced margin */
+}
+
+.validation-summary-errors ul {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.validation-summary-errors li {
+    margin-bottom: 0.1rem; /* Even less margin */
+}
+
+
+/* Submit Button */
+.btn-register-submit.btn-sm {
+    background: linear-gradient(135deg, navy 0%, #0277bd 100%); /* Match header gradient */
+    border: none;
+    padding: 0.5rem 1rem; /* Smaller padding */
+    font-size: 0.9rem; /* Smaller font size */
+    font-weight: 600;
+    border-radius: 5px; /* Match inputs */
+    transition: all 0.2s ease;
+    letter-spacing: 0.2px; /* Slightly less letter spacing */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.btn-register-submit:hover {
+    background: linear-gradient(135deg, #0277bd 0%, navy 100%); /* Slightly different gradient on hover */
+    transform: translateY(-0.5px); /* Very subtle lift */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly more pronounced shadow on hover */
+}
+
+.btn-register-submit:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer Section */
+.register-footer {
+    padding: 0.8rem 1.5rem; /* Reduced padding */
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+    .register-footer p.compact-footer-text {
+        font-size: 0.8rem; /* Even smaller footer text */
+        color: #6c757d;
+    }
+
+.login-link {
+    color: #0277bd; /* Link color matching header blue */
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+    .login-link:hover {
+        color: navy; /* Darker blue on hover */
+        text-decoration: underline;
+    }
+
+/* Alerts */
+.alert.compact-alert {
+    border-radius: 5px; /* Match other elements */
+    margin-bottom: 0.8rem; /* Reduced margin */
+    padding: 0.6rem 0.8rem; /* Reduced padding */
+    font-size: 0.8rem; /* Smaller alert font */
+}
+
+    .alert.compact-alert .btn-close {
+        padding: 0.2rem 0.4rem; /* Even smaller close button */
+        font-size: 0.8rem;
+    }
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

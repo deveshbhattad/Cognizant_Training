@@ -1,0 +1,92 @@
+﻿@model IEnumerable<TMS_MAIN.Models.Report>
+
+@{
+    ViewData["Title"] = "Reports";
+    Layout = "~/Views/Shared/_TreasurerLayout.cshtml";
+}
+@section Styles {
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=wrap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></style>
+    <link href="~/css/treasurer-dashboard.css" rel="stylesheet" />
+    <style>
+        /* ✅ Navbar Styling */
+        .navbar {
+            background-color: #343a40 !important;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        .navbar-title {
+            color: white !important;
+            font-size: 1.5rem;
+            margin-left: 30px;
+        }
+
+        #box {
+            padding: 20px;
+            margin-top: 40px; /* Space below navbar */
+        }
+    </style>
+}
+
+<br />
+<div id="box" class="container-fluid">
+    <br />
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3 d-flex justify-content-between align-items-center">
+        <h6 class="m-0 font-weight-bold text-primary">Reports</h6>
+        <a asp-action="Generate" class="btn btn-primary btn-sm">Generate New Report</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Report Name</th>
+                            <th>Module</th>
+                            <th>Date Range</th>
+                            <th>Generated On</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ReportName</td>
+                                <td>@item.Module</td>
+                                <td>@item.StartDate.ToShortDateString() - @item.EndDate.ToShortDateString()</td>
+                                <td>@item.GeneratedDate.ToString("g")</td>
+                                <td>
+                        @*             <span class="badge *@
+                        @* @(item.Status == "Generated" ? "badge-secondary" : *@
+                        @*   item.Status == "Viewed" ? "badge-info" : *@
+                        @*   item.Status == "ComplianceSubmitted" ? "badge-success" : "badge-secondary")"> *@
+                                        @item.Status
+                                    @* </span> *@
+                                </td>
+                                <td>
+                                    <a asp-action="ViewReport" asp-route-id="@item.ReportId" class="btn btn-info btn-sm">View</a>
+                                    <a asp-action="PrintReport" asp-route-id="@item.ReportId" class="btn btn-primary btn-sm" target="_blank">
+                                        <i class="fas fa-print"></i> Print
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@item.ReportId" class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i> Delete
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+        </div>
+    </div>
+</div>
+</div>
+
+
+}

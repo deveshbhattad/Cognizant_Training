@@ -1,0 +1,144 @@
+﻿@model TMS_MAIN.Models.ReportViewModel
+
+@{
+    ViewData["Title"] = "Generate Report";
+
+}
+@section Styles {
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=wrap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></style>
+    <link href="~/css/treasurer-dashboard.css" rel="stylesheet" />
+}
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3 bg-primary text-white">
+                    <h5 class="m-0 font-weight-bold">
+                        <i class="fas fa-file-alt"></i> Generate New Report
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Generate" method="post">
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="ReportName" class="control-label font-weight-bold"></label>
+                                    <input asp-for="ReportName" class="form-control" placeholder="Enter report name" />
+                                    <span asp-validation-for="ReportName" class="text-danger small"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="Module" class="control-label font-weight-bold"></label>
+                                    <select asp-for="Module" class="form-control" id="moduleSelect">
+                                        <option value="">-- Select Module --</option>
+                                        <option value="CashFlow">Cash Flow</option>
+                                        <option value="Investment">Investment</option>
+                                        <option value="Risk">Risk Management</option>
+                                        <option value="BankAccount">Bank Accounts</option>
+                                    </select>
+                                    <span asp-validation-for="Module" class="text-danger small"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row mt-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="StartDate" class="control-label font-weight-bold"></label>
+                                    <input asp-for="StartDate" type="date" class="form-control" />
+                                    <span asp-validation-for="StartDate" class="text-danger small"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="EndDate" class="control-label font-weight-bold"></label>
+                                    <input asp-for="EndDate" type="date" class="form-control" />
+                                    <span asp-validation-for="EndDate" class="text-danger small"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="accountIdGroup" class="form-group mt-3" style="display:none;">
+                            <label asp-for="AccountId" class="control-label font-weight-bold"></label>
+                            <select asp-for="AccountId" class="form-control">
+                                <option value="">-- Select Account --</option>
+                                @if (Model != null && Model.BankAccounts != null)
+                                {
+                                    foreach (var account in Model.BankAccounts)
+                                    {
+                                        <option value="@account.Value">@account.Text</option>
+                                    }
+                                }
+                            </select>
+                            <span asp-validation-for="AccountId" class="text-danger small"></span>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <div class="form-group text-right">
+                            <button type="submit" class="btn btn-primary btn-sm">
+                                <i class="fas fa-play-circle"></i> Generate Report
+                            </button>
+                            <a asp-action="Index" class="btn btn-secondary btn-sm ml-2">
+                                <i class="fas fa-times-circle"></i> Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function() {
+            // Initialize datepickers if you're using a library like jQuery UI Datepicker or similar
+            // For example, if using jQuery UI:
+            // $('#StartDate').datepicker({
+            //     dateFormat: 'yy-mm-dd'
+            // });
+            // $('#EndDate').datepicker({
+            //     dateFormat: 'yy-mm-dd'
+            // });
+
+            // Show/hide account ID field based on module selection
+            $('#moduleSelect').change(function() {
+                if ($(this).val() === 'CashFlow' || $(this).val() === 'BankAccount') {
+                    $('#accountIdGroup').slideDown(); // Use slideDown for a smoother animation
+                } else {
+                    $('#accountIdGroup').slideUp();   // Use slideUp for a smoother animation
+                }
+            }).trigger('change'); // Trigger on page load to set initial state
+
+            // Date validation - end date should be after start date
+            $('form').submit(function(e) {
+                var startDateVal = $('#StartDate').val();
+                var endDateVal = $('#EndDate').val();
+
+                // Only validate if both dates are provided
+                if (startDateVal && endDateVal) {
+                    var startDate = new Date(startDateVal);
+                    var endDate = new Date(endDateVal);
+
+                    if (startDate > endDate) {
+                        alert('End date must be after or equal to start date.'); // More user-friendly message
+                        e.preventDefault();
+                        return false;
+                    }
+                }
+                return true;
+            });
+        });
+    </script>
+}

@@ -1,0 +1,117 @@
+﻿@* Views/RiskAssessment/Edit.cshtml *@
+@model TMS_MAIN.Models.Risk
+
+@{
+    ViewData["Title"] = "Edit Risk Assessment";
+    Layout = "~/Views/Shared/_TreasurerLayout.cshtml";
+}
+
+@section Styles {
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=wrap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></style>
+    <link href="~/css/treasurer-dashboard.css" rel="stylesheet" />
+    <style>
+        /* ✅ Navbar Styling */
+        .navbar {
+            background-color: #343a40 !important;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        .navbar-title {
+            color: white !important;
+            font-size: 1.5rem;
+            margin-left: 30px;
+        }
+
+        #box {
+            padding: 20px;
+            margin-top: 70px; /* Space below navbar */
+        }
+    </style>
+}
+
+<br />
+<br />
+<br />
+
+<div id="box" class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-header bg-primary text-white">
+                    <h1 class="text-center mb-0">Edit Risk Assessment</h1>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Edit" asp-controller="RiskManagement" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                        <input type="hidden" asp-for="RiskId" /> @* Keep RiskId as hidden field for POST *@
+
+                        <div class="mb-3">
+                            <label asp-for="RiskId" class="form-label"></label>
+                            <input asp-for="RiskId" class="form-control" readonly /> 
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="RiskType" class="form-label"></label>
+                            <select asp-for="RiskType" class="form-select">
+                                <option value="Currency Fluctuation">Currency Fluctuation</option>
+                                <option value="Credit Default">Credit Default</option>
+                                <option value="Liquidity Risk">Liquidity Risk</option>
+                                <option value="Operational Error">Operational Error</option>
+                                <option value="Market Volatility">Market Volatility</option>
+                                <option value="Interest Rate Risk">Interest Rate Risk</option>
+                                <option value="Cybersecurity Risk">Cybersecurity Risk</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <span asp-validation-for="RiskType" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="TransactionReference" class="form-label"></label>
+                            <input asp-for="TransactionReference" class="form-control" />
+                            <span asp-validation-for="TransactionReference" class="text-danger"></span>
+                        </div>
+                         <div class="mb-3">
+                            <label asp-for="Amount" class="form-label">Transaction Amount (for suggestion):</label>
+                            <input asp-for="Amount" type="number" step="0.01" class="form-control" />
+                            <span asp-validation-for="Amount" class="text-danger"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Impact" class="form-label">Impact (1-5):</label>
+                            <input asp-for="Impact" type="number" min="1" max="5" class="form-control" />
+                            <span asp-validation-for="Impact" class="text-danger"></span>
+                            <small class="form-text text-muted">1=Negligible, 3=Moderate, 5=Critical</small>
+                        </div>
+                        <div class="mb-3">
+                            <label asp-for="Probability" class="form-label">Probability (1-5):</label>
+                            <input asp-for="Probability" type="number" min="1" max="5" class="form-control" />
+                            <span asp-validation-for="Probability" class="text-danger"></span>
+                            <small class="form-text text-muted">1=Rare, 3=Possible, 5=Very Likely</small>
+                        </div>
+                            <div class="mb-3">
+                                <label asp-for="AssessmentDate" class="form-label"></label>
+                                <input asp-for="AssessmentDate" class="form-control" type="date" />
+                                <span asp-validation-for="AssessmentDate" class="text-danger"></span>
+                            </div>
+
+                            <div class="d-grid gap-2 mt-4">
+                                <input type="submit" value="Save Changes" class="btn btn-primary btn-lg" />
+                                <a asp-action="RMIndex" asp-controller="RiskManagement" class="btn btn-outline-secondary btn-lg">Back to List</a>
+                            </div>
+                    </form> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/treasurer-dashboard.js"></script>
+}

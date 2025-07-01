@@ -1,0 +1,104 @@
+﻿@model TMS_MAIN.Models.ReportViewModel
+@{
+    ViewData["Title"] = "Generate Report";
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Generate New Report</h6>
+    </div>
+    <div class="card-body">
+        <form asp-action="Generate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="ReportName" class="control-label"></label>
+                <input asp-for="ReportName" class="form-control" />
+                <span asp-validation-for="ReportName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Module" class="control-label"></label>
+                <select asp-for="Module" class="form-control" id="moduleSelect">
+                    <option value="">-- Select Module --</option>
+                    <option value="CashFlow">Cash Flow</option>
+                    <option value="Investment">Investment</option>
+                    <option value="Risk">Risk Management</option>
+					<option value="BankAccount">Bank Account</option>
+                </select>
+                <span asp-validation-for="Module" class="text-danger"></span>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="StartDate" class="control-label"></label>
+                        <input asp-for="StartDate" type="date" class="form-control" />
+                        <span asp-validation-for="StartDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="EndDate" class="control-label"></label>
+                        <input asp-for="EndDate" type="date" class="form-control" />
+                        <span asp-validation-for="EndDate" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="accountIdGroup" class="form-group" style="display:none;">
+                <label asp-for="AccountId" class="control-label">Bank Account</label>
+                <select asp-for="AccountId" class="form-control" asp-items="ViewBag.BankAccounts">
+                    <option value="">-- Select Account --</option>
+
+					
+                </select>
+                <span asp-validation-for="AccountId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Generate Report" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        $(document).ready(function() {
+            // Show/hide account field based on module selection
+            $('#moduleSelect').change(function() {
+                if ($(this).val() === 'CashFlow') {
+                    $('#accountIdGroup').show();
+                } else {
+                    $('#accountIdGroup').hide();
+                    $('#AccountId').val('');
+                }
+            });
+
+            // Date validation
+            $('form').submit(function(e) {
+                var startDate = new Date($('#StartDate').val());
+                var endDate = new Date($('#EndDate').val());
+
+                if (startDate > endDate) {
+                    alert('End date must be after start date');
+                    e.preventDefault();
+                    return false;
+                }
+
+                if ($('#moduleSelect').val() === '') {
+                    alert('Please select a module');
+                    e.preventDefault();
+                    return false;
+                }
+
+                return true;
+            });
+        });
+    </script>
+}

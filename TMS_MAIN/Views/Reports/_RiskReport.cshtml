@@ -1,0 +1,189 @@
+﻿@model TMS_MAIN.Models.RiskReportViewModel
+@section Styles
+{
+    <style>
+        @@media print {
+            body {
+                background-color: white;
+                color: black;
+                font-size: 12pt;
+            }
+
+            .card, .table {
+                border: 1px solid #000 !important;
+            }
+
+                .table th, .table td {
+                    border: 1px solid #000 !important;
+                    padding: 5px;
+                }
+
+            .badge {
+                border: 1px solid #000;
+                color: black !important;
+                background-color: white !important;
+            }
+
+            .badge-danger {
+                background-color: #f8d7da !important;
+            }
+
+            .badge-info {
+                background-color: #d1ecf1 !important;
+            }
+
+            .badge-warning {
+                background-color: #fff3cd !important;
+            }
+
+            .badge-secondary {
+                background-color: #e2e3e5 !important;
+            }
+
+            .text-danger {
+                color: #721c24 !important;
+            }
+
+            .text-success {
+                color: #155724 !important;
+            }
+
+            button, .no-print {
+                display: none !important;
+            }
+
+            .card-header {
+                background-color: #f8f9fa !important;
+                border-bottom: 1px solid #000 !important;
+            }
+
+            table {
+                page-break-inside: auto;
+            }
+
+            tr {
+                page-break-inside: avoid;
+                page-break-after: auto;
+            }
+        }
+    </style>
+}
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Risk Management Summary</h6>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-warning shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                    Total Risks
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.TotalRisks</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-exclamation-triangle fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-danger shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                    Average Risk Score
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.AverageRiskScore.ToString("0.00")</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-chart-bar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-danger shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                    High Risks
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.HighRiskCount</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-exclamation-circle fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                    Medium Risks
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.MediumRiskCount</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-info-circle fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered" width="100%" cellspacing="0">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Risk ID</th>
+                        <th>Type</th>
+                        <th>Score</th>
+                        <th>Level</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.FilteredRisks.Any())
+                    {
+                        @foreach (var item in Model.FilteredRisks)
+                        {
+                            <tr>
+                                <td>@item.RiskId</td>
+                                <td>@item.RiskType</td>
+                                <td>@item.RiskScore.ToString("0.00")</td>
+                                <td>
+                                     @item.RiskLevel
+                                    
+                                </td>
+                                <td>@item.AssessmentDate.ToShortDateString()</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center">No risks found for the selected period</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

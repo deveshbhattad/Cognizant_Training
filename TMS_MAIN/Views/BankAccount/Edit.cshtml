@@ -1,0 +1,229 @@
+﻿@model TMS_MAIN.Models.BViewModel
+@{
+    ViewData["Title"] = "Edit Bank Account";
+    Layout = "~/Views/Shared/_TreasurerLayout.cshtml";
+}
+
+@section Styles {
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=wrap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></style>
+    <link href="~/css/treasurer-dashboard.css" rel="stylesheet" />
+    <style>
+        .navbar {
+            background-color: #343a40 !important;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        #box {
+            padding: 20px;
+            margin-top: 80px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .card {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            border: none;
+            border-radius: 10px;
+        }
+
+        .card-header {
+            background-color: #0d6efd;
+            color: white;
+            border-top-left-radius: 10px !important;
+            border-top-right-radius: 10px !important;
+            padding: 1rem;
+        }
+
+        .info-box {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+            .info-box p {
+                margin-bottom: 0.5rem;
+                color: #6c757d;
+            }
+
+        .btn-toolbar {
+            gap: 10px;
+        }
+
+        .input-group-text {
+            background-color: #e9ecef;
+        }
+
+        .form-control:focus {
+            border-color: #86b7fe;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+
+        .text-danger {
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+    </style>
+}
+
+
+<div id="box" class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h2 class="mb-0">Edit Bank Account</h2>
+                </div>
+                <div class="card-body">
+                    @* <div class="info-box mb-4"> *@
+                    @*     <div class="row"> *@
+                    @*         <div class="col-md-6"> *@
+                    @*             <p><i class="bi bi-person-fill"></i> Current User's Login: @ViewBag.CurrentUser</p> *@
+                    @*         </div> *@
+                    @*         <div class="col-md-6"> *@
+                    @*             <p><i class="bi bi-clock-fill"></i> Current Date and Time (UTC): @ViewBag.CurrentDateTime</p> *@
+                    @*         </div> *@
+                    @*     </div> *@
+                    @* </div> *@
+
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <i class="bi bi-exclamation-triangle-fill"></i> @TempData["Error"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+
+                    <form asp-action="Edit" asp-controller="BankAccount" asp-route-id="@Model.AccountId" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" asp-for="AccountId" />
+
+                        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert"></div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="BankName" class="form-label fw-bold">Bank Name</label>
+                            <input asp-for="BankName" class="form-control" placeholder="Enter bank name" />
+                            <span asp-validation-for="BankName" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="AccountNumber" class="form-label fw-bold">Account Number</label>
+                            <input asp-for="AccountNumber" class="form-control" placeholder="Enter account number" />
+                            <span asp-validation-for="AccountNumber" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label asp-for="AccountType" class="form-label fw-bold">Account Type</label>
+                            <select asp-for="AccountType" asp-items="ViewBag.AccountTypes" class="form-select">
+                                <option value="">-- Select Account Type --</option>
+                            </select>
+                            <span asp-validation-for="AccountType" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group mb-4">
+                            <label asp-for="Balance" class="form-label fw-bold">Balance</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input asp-for="Balance" type="number" step="0.01" class="form-control" placeholder="0.00" />
+                            </div>
+                            <span asp-validation-for="Balance" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-flex justify-content-center gap-2">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-check-circle"></i> Save Changes
+                            </button>
+                            <a asp-action="Index" class="btn btn-secondary">
+                                <i class="bi bi-arrow-left"></i> Back to List
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    <script>
+        $(document).ready(function () {
+            // Client-side validation
+            $('form').validate({
+                rules: {
+                    BankName: {
+                        required: true,
+                        maxlength: 100
+                    },
+                    AccountNumber: {
+                        required: true,
+                        maxlength: 50
+                    },
+                    AccountType: {
+                        required: true
+                    },
+                    Balance: {
+                        required: true,
+                        number: true,
+                        min: 0,
+                        max: 9999999999999.99
+                    }
+                },
+                messages: {
+                    BankName: {
+                        required: "Please enter the bank name",
+                        maxlength: "Bank name cannot exceed 100 characters"
+                    },
+                    AccountNumber: {
+                        required: "Please enter the account number",
+                        maxlength: "Account number cannot exceed 50 characters"
+                    },
+                    AccountType: {
+                        required: "Please select an account type"
+                    },
+                    Balance: {
+                        required: "Please enter the balance",
+                        number: "Please enter a valid number",
+                        min: "Balance cannot be negative",
+                        max: "Balance exceeds maximum allowed value"
+                    }
+                },
+                errorElement: 'span',
+                errorClass: 'text-danger',
+                highlight: function (element, errorClass) {
+                    $(element).addClass('is-invalid');
+                },
+                unhighlight: function (element, errorClass) {
+                    $(element).removeClass('is-invalid');
+                }
+            });
+
+            // Auto-hide alerts after 5 seconds
+            setTimeout(function () {
+                $('.alert-dismissible').alert('close');
+            }, 5000);
+
+            // Format Balance input
+            $('#Balance').on('change', function() {
+                var value = $(this).val();
+                if(value !== "") {
+                    $(this).val(parseFloat(value).toFixed(2));
+                }
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/treasurer-dashboard.js"></script>
+                        </script>
+}

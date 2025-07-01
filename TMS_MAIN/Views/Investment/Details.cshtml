@@ -1,0 +1,83 @@
+﻿@model Investment
+
+@{
+    ViewData["Title"] = "Investment Details";
+    Layout = "~/Views/Shared/_TreasurerLayout.cshtml";
+}
+
+@section Styles {
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=wrap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> @* Added for 'bi bi-arrow-left' icon *@
+    <link href="~/css/treasurer-dashboard.css" rel="stylesheet" />
+
+    <style>
+        /* Navbar Styling from your original commented out section, made active */
+        .navbar {
+            background-color: #343a40 !important;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        .navbar-title { /* This class is not used in your current HTML but kept for reference */
+            color: white !important;
+            font-size: 1.5rem;
+            margin-left: 30px;
+        }
+
+        #box {
+            padding: 50px;
+            margin-top: 100px; /* Adjusted margin-top to prevent overlap with fixed navbar */
+        }
+    </style>
+}
+
+
+<br />
+<br />
+
+<div id="box" class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-header">
+                    <h2 class="text-center">Investment Details</h2>
+                </div>
+                <div class="card-body">
+                    <h4>Investment</h4>
+                    <hr />
+                    <dl class="row">
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.InvestmentType)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.InvestmentType)</dd>
+
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.AmountInvested)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.AmountInvested)</dd>
+
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.CurrentValue)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.CurrentValue)</dd>
+
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.PurchaseDate)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.PurchaseDate)</dd>
+
+                        <dt class="col-sm-4">@Html.DisplayNameFor(model => model.MaturityDate)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.MaturityDate)</dd>
+                    </dl>
+                </div>
+                <div class="card-footer text-center">
+                    <a asp-action="Edit" asp-route-id="@Model.InvestmentId" class="btn btn-primary">Edit</a>
+                    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/treasurer-dashboard.js"></script>
+}

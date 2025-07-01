@@ -1,0 +1,355 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* Medium blue gradient background - matching login page */
+    background: linear-gradient(135deg, white 0%, #4fc3f7 100%);
+    min-height: 100vh;
+    color: #333; /* Default text color for general content if not overridden */
+}
+
+/* Navbar (Medium Blue) */
+.navbar {
+    background: linear-gradient(135deg, navy 0%, #0277bd 100%) !important; /* Medium blue */
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0; /* Standard thickness */
+}
+
+.navbar-brand {
+    color: white !important;
+    font-weight: 700; /* Thick */
+    font-size: 1.8rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    color: #f0f0f0 !important; /* Thick off-white letters */
+    font-weight: 600; /* Thick */
+    transition: all 0.2s ease-out; /* Faster, simpler transition */
+    position: relative;
+}
+
+    .nav-link:hover {
+        color: #e3f2fd !important; /* Lighter white on hover */
+        transform: translateY(-1px); /* Subtle lift */
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    }
+
+.navbar-text {
+    color: #f0f0f0 !important; /* Thick off-white letters */
+    font-weight: 600; /* Thicker */
+    background: rgba(255, 255, 255, 0.1); /* Subtle background */
+    padding: 7px 15px;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    padding: 30px 20px;
+    margin-top: 85px; /* Adjusted for navbar height */
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Welcome Section (Medium Blue) */
+.welcome-section {
+    background: linear-gradient(135deg,navy 0%, #0277bd 100%); /* Medium blue */
+    border-radius: 18px;
+    padding: 40px;
+    margin-bottom: 40px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    position: relative;
+    overflow: hidden;
+}
+
+    .welcome-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 0%, transparent 70%);
+        opacity: 0.5;
+    }
+
+    .welcome-section h1 {
+        font-size: 2.8rem;
+        font-weight: 700; /* Thick */
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 1;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .welcome-section p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        position: relative;
+        z-index: 1;
+    }
+
+/* Stats Cards (White with Blue Accent) */
+.stats-row {
+    margin-bottom: 40px;
+}
+
+.stat-card {
+    background: #ffffff; /* White background for stats cards */
+    border-radius: 14px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Very light border */
+    transition: all 0.2s ease-out;
+    position: relative;
+    overflow: hidden;
+    color: #333; /* Dark text for contrast on white */
+}
+
+    .stat-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(135deg, #039be5 0%, #0277bd 100%); /* Medium blue accent line */
+    }
+
+    .stat-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+        background: #f8faff; /* Slight light blue tint on hover */
+    }
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: 700; /* Thick */
+    color: #039be5; /* Medium blue number */
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    color: #616161; /* Dark grey for label */
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* Dashboard Cards (White with Blue Accent) */
+.dashboard-card {
+    background: #ffffff; /* White background for dashboard cards */
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+    margin-bottom: 30px;
+    padding: 35px;
+    transition: all 0.2s ease-out;
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Very light border */
+    position: relative;
+    overflow: hidden;
+    color: #333; /* Dark text for content */
+}
+
+    .dashboard-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(135deg, blue 0%, #0277bd 100%); /* Medium blue accent line */
+    }
+
+    .dashboard-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        border-color: rgba(0, 0, 0, 0.1);
+        background: #f8faff; /* Slight light blue tint on hover */
+    }
+
+    .dashboard-card h3 {
+        color: #212121; /* Darker text for headings */
+        font-size: 1.4rem;
+        font-weight: 600; /* Thick */
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .dashboard-card p {
+        color: #616161; /* Dark grey for description */
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+
+/* Buttons (Medium Blue) */
+.btn-enhanced {
+    background: linear-gradient(135deg, blue 0%, #0277bd 100%); /* Medium blue */
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600; /* Thick */
+    font-size: 0.9rem;
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 3px 10px rgba(2, 119, 189, 0.2);
+}
+
+    .btn-enhanced:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 15px rgba(2, 119, 189, 0.3);
+        color: white;
+        text-decoration: none;
+        background: linear-gradient(135deg, #0277bd 0%, #01579b 100%); /* Slightly darker on hover */
+    }
+
+.btn-secondary-enhanced {
+    background: linear-gradient(135deg, #90a4ae 0%, #78909c 100%); /* Subtle greyish blue */
+    color: #333; /* Dark text */
+    box-shadow: 0 3px 10px rgba(120, 144, 156, 0.2);
+}
+
+    .btn-secondary-enhanced:hover {
+        box-shadow: 0 5px 15px rgba(120, 144, 156, 0.3);
+        color: #212121;
+        background: linear-gradient(135deg, #78909c 0%, #607d8b 100%);
+    }
+
+/* Card Icons (Medium Blue) */
+.card-icon {
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, blue 0%, #0277bd 100%); /* Medium blue */
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 15px rgba(2, 119, 189, 0.2);
+}
+
+/* Profile Dropdown (White with Blue Accents) */
+.dropdown-menu {
+    background: #ffffff; /* White background */
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    margin-top: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-header {
+    color: #039be5; /* Medium blue header */
+    font-weight: 700; /* Thick */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.dropdown-item-text {
+    color: #424242; /* Darker grey text */
+    margin-bottom: 8px;
+    padding: 4px 0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+    .dropdown-item-text strong {
+        color: #616161; /* Dark grey for labels */
+        font-weight: 600; /* Thick */
+    }
+
+/* Responsive Design */
+@@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 20px 15px;
+        margin-top: 80px;
+    }
+
+    .welcome-section {
+        padding: 30px;
+    }
+
+        .welcome-section h1 {
+            font-size: 2rem;
+        }
+
+    .dashboard-card {
+        padding: 25px;
+    }
+}
+
+/* Animation (Reduced) */
+@@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dashboard-card {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+    .dashboard-card:nth-child(1) {
+        animation-delay: 0.05s;
+    }
+
+    .dashboard-card:nth-child(2) {
+        animation-delay: 0.1s;
+    }
+
+    .dashboard-card:nth-child(3) {
+        animation-delay: 0.15s;
+    }
+
+    .dashboard-card:nth-child(4) {
+        animation-delay: 0.2s;
+    }
+
+    .dashboard-card:nth-child(5) {
+        animation-delay: 0.25s;
+    }
+
+/* Ripple effect (Reduced) */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(0);
+    animation: ripple-animation 0.5s linear;
+    pointer-events: none;
+}
+
+@@keyframes ripple-animation {
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}

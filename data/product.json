@@ -1,0 +1,128 @@
+[
+    {
+      "id": 1,
+      "name": "Retro Bluetooth Speaker",
+      "description": "Vintage style speaker with modern Bluetooth tech.",
+      "price": 49.99,
+      "imageUrl": "../Images/Retro Bluetooth Speaker.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Ergonomic Wireless Mouse",
+      "description": "Comfortable mouse for long hours of work.",
+      "price": 25.50,
+      "imageUrl": "../Images/Ergonomic Wireless Mouse.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Smart LED Desk Lamp",
+      "description": "Adjustable brightness and color temperature.",
+      "price": 35.00,
+      "imageUrl": "../Images/Mechanical Keyboard.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Portable SSD 1TB",
+      "description": "Fast and reliable external storage.",
+      "price": 89.99,
+      "imageUrl": "../Images/Portable SSD 1TB.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Noise Cancelling Headphones",
+      "description": "Immersive sound experience, blocks external noise.",
+      "price": 120.00,
+      "imageUrl": "../Images/Noise Cancelling Headphones.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Mechanical Keyboard",
+      "description": "Clicky keys for a satisfying typing experience.",
+      "price": 75.00,
+      "imageUrl": "../Images/Mechanical Keyboard.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Retro Bluetooth Speaker",
+      "description": "Vintage style speaker with modern Bluetooth tech.",
+      "price": 49.99,
+      "imageUrl": "../Images/Retro Bluetooth Speaker.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Ergonomic Wireless Mouse",
+      "description": "Comfortable mouse for long hours of work.",
+      "price": 25.50,
+      "imageUrl": "../Images/Ergonomic Wireless Mouse.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Smart LED Desk Lamp",
+      "description": "Adjustable brightness and color temperature.",
+      "price": 35.00,
+      "imageUrl": "../Images/Mechanical Keyboard.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Portable SSD 1TB",
+      "description": "Fast and reliable external storage.",
+      "price": 89.99,
+      "imageUrl": "../Images/Portable SSD 1TB.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Noise Cancelling Headphones",
+      "description": "Immersive sound experience, blocks external noise.",
+      "price": 120.00,
+      "imageUrl": "../Images/Noise Cancelling Headphones.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Mechanical Keyboard",
+      "description": "Clicky keys for a satisfying typing experience.",
+      "price": 75.00,
+      "imageUrl": "../Images/Mechanical Keyboard.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Retro Bluetooth Speaker",
+      "description": "Vintage style speaker with modern Bluetooth tech.",
+      "price": 49.99,
+      "imageUrl": "../Images/Retro Bluetooth Speaker.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Ergonomic Wireless Mouse",
+      "description": "Comfortable mouse for long hours of work.",
+      "price": 25.50,
+      "imageUrl": "../Images/Ergonomic Wireless Mouse.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Smart LED Desk Lamp",
+      "description": "Adjustable brightness and color temperature.",
+      "price": 35.00,
+      "imageUrl": "../Images/Mechanical Keyboard.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Portable SSD 1TB",
+      "description": "Fast and reliable external storage.",
+      "price": 89.99,
+      "imageUrl": "../Images/Portable SSD 1TB.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Noise Cancelling Headphones",
+      "description": "Immersive sound experience, blocks external noise.",
+      "price": 120.00,
+      "imageUrl": "../Images/Noise Cancelling Headphones.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Mechanical Keyboard",
+      "description": "Clicky keys for a satisfying typing experience.",
+      "price": 75.00,
+      "imageUrl": "../Images/Mechanical Keyboard.jpg"
+    }
+  ]

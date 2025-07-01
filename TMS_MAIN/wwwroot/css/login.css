@@ -1,0 +1,100 @@
+﻿body {
+    font-family: 'Inter', sans-serif;
+    /* Medium blue gradient background */
+    background: linear-gradient(135deg, white 0%, #4fc3f7 100%); /* Lighter medium blue start, slightly darker end */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333; /* Darker text for contrast */
+}
+
+.login-container {
+    max-width: 470px;
+    width: 100%;
+    padding: 20px;
+    padding-top:10px;
+}
+
+.login-card {
+    background-color: #fff;
+    border-radius: 15px; /* Softer rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Very light border */
+    animation: fadeIn 0.8s ease-out forwards; /* Simple fade-in animation */
+}
+
+.login-header {
+    background: linear-gradient(135deg, navy 0%, #0277bd 100%); /* Medium blue header */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-body {
+    padding: 30px;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 8px;
+    display: block; /* Ensures it takes full width */
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    padding: 12px 15px;
+    border: 1px solid #ced4da;
+    transition: all 0.2s ease-in-out;
+    font-size: 1rem;
+}
+
+    .form-control:focus, .form-select:focus {
+        border-color: #039be5; /* Medium blue focus */
+        box-shadow: 0 0 0 0.25rem rgba(3, 155, 229, 0.25);
+        outline: none;
+    }
+
+.btn-login {
+    background: linear-gradient(135deg, navy 0%, #0277bd 100%); /* Medium blue for button */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.2s ease-out;
+    box-shadow: 0 4px 15px rgba(2, 119, 189, 0.3); /* Shadow reflecting button color */
+    cursor: pointer;
+}
+
+    .btn-login:hover {
+        background: linear-gradient(135deg, #0277bd 0%, #01579b 100%); /* Slightly darker on hover */
+        box-shadow: 0 6px 20px rgba(2, 119, 189, 0.4);
+        transform: translateY(-2px);
+        color: white; /* Ensure text remains white */
+    }
+
+.error-message {
+    color: #dc3545; /* Red for error messages */
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+/* Animation */
+@@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

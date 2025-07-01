@@ -1,0 +1,222 @@
+﻿@model TMS_MAIN.ViewModels.ReportDisplayViewModel
+
+@{
+    ViewData["Title"] = "View Report";
+    Layout = "~/Views/Shared/_TreasurerLayout.cshtml";
+}
+@section Styles {
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=wrap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></style>
+    <link href="~/css/treasurer-dashboard.css" rel="stylesheet" />
+    <style>
+        /* ✅ Navbar Styling */
+        .navbar {
+            background-color: #343a40 !important;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        .navbar-title {
+            color: white !important;
+            font-size: 1.5rem;
+            margin-left: 30px;
+        }
+
+        #box {
+            padding: 20px;
+            margin-top: 100px; /* Space below navbar */
+        }
+    </style>
+}
+
+
+<div class="container" id="box">
+<div class="card shadow mb-4">
+    <div class="card-header py-3 d-flex justify-content-between align-items-center">
+        <h6 class="m-0 font-weight-bold text-primary">@Model.Report.ReportName</h6>
+        <span class="badge
+              @(Model.Report.Status.ToString() == "Generated" ? "badge-secondary" :
+                Model.Report.Status.ToString() == "Viewed" ? "badge-info" : "badge-success")">
+            @Model.Report.Status
+        </span>
+        
+    </div>
+    <div class="card-body">
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Module
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">@Model.Report.Module</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-folder fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    Date Range
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    @Model.Report.StartDate.ToShortDateString() - @Model.Report.EndDate.ToShortDateString()
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                    Generated On
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    @Model.Report.GeneratedDate.ToString("g")
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-clock fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @if (Model.Report.Module == "CashFlow")
+        {
+            var reportData = Model.ReportData as TMS_MAIN.Models.CashFlowReportViewModel;
+            // Corrected: Check if reportData is not null before passing to partial
+            if (reportData != null)
+            {
+                 <partial name="~/Views/Reports/_CashFlowReport.cshtml" model="reportData" />
+            }
+            else
+            {
+                <p class="text-danger">Cash Flow report data is missing or in an unexpected format.</p>
+            }
+        }
+        else if (Model.Report.Module == "Investment")
+        {
+            var reportData = Model.ReportData as TMS_MAIN.ViewModels.PortfolioSummaryViewModel;
+            // Corrected: Check if reportData is not null before passing to partial
+            if (reportData != null)
+            {
+                <partial name="/Views/Reports/_InvestmentReport.cshtml" model="reportData" /> 
+            }
+            else
+            {
+                <p class="text-danger">Investment report data is missing or in an unexpected format.</p>
+            }
+        }
+        else if (Model.Report.Module == "BankAccount")
+        {
+            var reportData = Model.ReportData as TMS_MAIN.ViewModels.BankAccountReportViewModel;
+            // Corrected: Check if reportData is not null before passing to partial
+            if (reportData != null)
+            {
+                 <partial name="/Views/Reports/_BankAccountReport.cshtml" model="reportData" /> 
+            }
+            else
+            {
+                <p class="text-danger">Bank report data is missing or in an unexpected format.</p>
+            }
+        }
+        else if (Model.Report.Module == "Risk")
+        {
+            var reportData = Model.ReportData as TMS_MAIN.Models.RiskReportViewModel;
+            // Corrected: Check if reportData is not null before passing to partial
+            if (reportData != null)
+            {
+                <partial name="/Views/Reports/_RiskReport.cshtml" model="reportData" />
+            }
+            else
+            {
+                <p class="text-danger">Risk report data is missing or in an unexpected format.</p>
+            }
+        }
+        else
+        {
+            <p class="text-info">No specific report data available for module: @Model.Report.Module.</p>
+        }
+
+
+        @if (Model.Report.Status != "ComplianceSubmitted")
+        {
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h6 class="m-0 font-weight-bold text-primary">Submit Compliance</h6>
+                </div>
+                <div class="card-body">
+                    <form asp-action="SubmitCompliance" method="post">
+                        <input type="hidden" name="reportId" value="@Model.Report.ReportId" />
+
+                        <div class="form-group">
+                            <label for="notes" class="control-label">Notes</label>
+                            <textarea name="notes" class="form-control" rows="3"
+                                      placeholder="Enter any compliance notes..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">
+                                <i class="fas fa-check"></i> Submit Compliance
+                            </button>
+                            <a asp-action="Index" class="btn btn-secondary">Back to Reports</a>
+                            
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h6 class="m-0 font-weight-bold text-primary">Compliance Details</h6>
+                </div>
+                <div class="card-body">
+                    @foreach (var compliance in Model.Compliances)
+                    {
+                        <div class="mb-3 p-3 border rounded">
+                            <div class="d-flex justify-content-between">
+                                <strong>Submitted by: @compliance.User.FullName</strong>
+                                <span class="badge badge-success">@compliance.Status</span>
+                            </div>
+                            <div class="text-muted small">@compliance.SubmissionDate.ToString("g")</div>
+                            @if (!string.IsNullOrEmpty(compliance.Notes))
+                            {
+                                <div class="mt-2">@compliance.Notes</div>
+                            }
+                        </div>
+                    }
+                    <div class="mt-3">
+                        <a asp-action="Index" class="btn btn-secondary">Back to Reports</a>
+                    </div>
+                    @* <button class="btn btn-danger" onclick="window.print()">Print</button> *@
+                </div>
+            </div>
+        }
+    </div>
+</div>
+</div>

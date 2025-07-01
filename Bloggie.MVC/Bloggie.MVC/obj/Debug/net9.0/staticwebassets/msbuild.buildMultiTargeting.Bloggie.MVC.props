@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Bloggie.MVC.props" />
+</Project>

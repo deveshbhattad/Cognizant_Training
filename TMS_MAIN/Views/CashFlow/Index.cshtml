@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<TMS_MAIN.Models.CashFlow>
+@{
+    ViewData["Title"] = "All user CashFlows";
+}
+<table class="table table-responsive table-hover">
+    <thead class="bg bg-dark text-white">
+        <tr>
+            <th>TransactionId</th>
+            <th>UserId</th>
+            <th>TransactionDate</th>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>TransactionType</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.TransactionId</td>
+                <td>@item.UserId</td>
+                <td>@item.TransactionDate</td>
+                <td>@item.Description</td>
+                <td>@item.Amount.ToString("C")</td>
+                <td>@item.TransactionType</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.TransactionId" class="btn btn-primary btn-sm mr-2">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.TransactionId" class="btn btn-danger btn-sm ml-2">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

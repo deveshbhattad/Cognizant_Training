@@ -1,0 +1,86 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<TMS_MAIN.Models.CashFlow>
+@{
+    ViewData["Title"] = "MainPage";
+    Layout = "~/Views/Shared/_TreasurerLayout.cshtml";
+}
+@section Styles {
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=wrap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></style>
+    <link href="~/css/treasurer-dashboard.css" rel="stylesheet" />
+    .box{
+        padding:30px;
+    }
+}
+
+
+
+<div id="box" class="container-fluid">
+    <h1 class="text-center">Cash Flow Transactions</h1>
+    <br /><p class="text-right">
+        <a asp-action="Create" class="btn btn-success"><i class="bi bi-plus-circle"></i>New</a>
+    </p>
+    <table class="table table-responsive table-hover">
+        <thead class="bg bg-dark text-white">
+            <tr>
+                <th>TransactionId</th>
+                <th>TransactionDate</th>
+                <th>AccountId</th>              
+                <th>TransactionType</th>
+                <th>Amount</th>  
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.TransactionId</td>
+                    <td>@item.TransactionDate</td>
+                    <td>@item.AccountId</td>                   
+                    <td>@item.TransactionType</td>
+                    <td>@item.Amount.ToString("C")</td>
+                    <td>@item.Description</td>                 
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="row text-center">
+        <div class="text-center mt-4">
+            @* <a href="/CashFlow/GetCashFlowReport" class="btn btn-info btn-lgv">Report</a> *@
+            <a href="/CashFlow/GetCashFlowReport" class="btn btn-warning"><i class="bi bi-file-earmark-text"></i>Go To Report</a>
+            <a href="/Treasurer/TreasurerDashboard" class="btn btn-info ml-3"><i class="bi bi-arrow-left"></i>Back To Dashboard</a>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/treasurer-dashboard.js"></script>
+        </script>
+}
+
+
+
+@* <div class="card">
+    <div class="card-header"> 
+        <h2>Cash Flow Report</h2>
+    </div>
+    <div class="card-body">
+        <strong>Total Inflow:</strong> @ViewBag.TotalInflow
+        <br>
+        <strong>Total Outflow:</strong> @ViewBag.TotalOutflow
+        <br>
+        <strong>Net Cash Flow:</strong> @ViewBag.NetCash
+    </div>
+</div> *@

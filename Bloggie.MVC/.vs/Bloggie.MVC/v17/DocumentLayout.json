@@ -1,0 +1,494 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\controllers\\admintagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\controllers\\admintagscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\controllers\\adminblogpostscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\controllers\\adminblogpostscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\views\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\controllers\\blogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\repositories\\blogpostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\repositories\\blogpostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\repositories\\iblogpostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\repositories\\iblogpostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\views\\admintags\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\views\\admintags\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\repositories\\cloudinaryimagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\repositories\\cloudinaryimagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\controllers\\imagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\controllers\\imagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\repositories\\iimagerespository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\repositories\\iimagerespository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\views\\adminblogposts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\views\\adminblogposts\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\views\\adminblogposts\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\views\\adminblogposts\\list.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\views\\adminblogposts\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\views\\adminblogposts\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\views\\admintags\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\views\\admintags\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\models\\viewmodels\\editblogpostsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\models\\viewmodels\\editblogpostsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\models\\viewmodels\\addtagrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\models\\viewmodels\\addtagrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\repositories\\tagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\repositories\\tagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\data\\bloggiedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\data\\bloggiedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\models\\viewmodels\\addblogpostsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\models\\viewmodels\\addblogpostsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\models\\viewmodels\\edittagrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\models\\viewmodels\\edittagrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\repositories\\itagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\repositories\\itagrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|c:\\users\\2406766\\onedrive - cognizant\\desktop\\cognizant_training\\bloggie.mvc\\bloggie.mvc\\migrations\\20250607072617_migration32.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0FC3018A-7873-4D20-ABD2-B5716B5C2EA9}|Bloggie.MVC\\Bloggie.MVC.csproj|solutionrelative:bloggie.mvc\\migrations\\20250607072617_migration32.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAewEkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T09:47:19.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AdminTagsController.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Controllers\\AdminTagsController.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Controllers\\AdminTagsController.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Controllers\\AdminTagsController.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Controllers\\AdminTagsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T09:29:31.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BlogPostRepository.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Repositories\\BlogPostRepository.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Repositories\\BlogPostRepository.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Repositories\\BlogPostRepository.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Repositories\\BlogPostRepository.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAIA0wDAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T05:12:45.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AdminBlogPostsController.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Controllers\\AdminBlogPostsController.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Controllers\\AdminBlogPostsController.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Controllers\\AdminBlogPostsController.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Controllers\\AdminBlogPostsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T05:03:02.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccessDenied.cshtml",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Views\\Account\\AccessDenied.cshtml",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\Account\\AccessDenied.cshtml",
+              "RelativeToolTip": "Bloggie.MVC\\Views\\Account\\AccessDenied.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-17T09:48:52.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BlogController.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Controllers\\BlogController.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Controllers\\BlogController.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Controllers\\BlogController.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Controllers\\BlogController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAWwBQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T05:12:59.377Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Bloggie.MVC\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAuwBoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-13T11:21:27.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAWwBUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T11:11:32.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Bloggie.MVC\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABcAAAAAAAAAAAApwB4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T07:18:24.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IBlogPostRepository.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Repositories\\IBlogPostRepository.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Repositories\\IBlogPostRepository.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Repositories\\IBlogPostRepository.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Repositories\\IBlogPostRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T05:47:51.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\AdminTags\\List.cshtml",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Views\\AdminTags\\List.cshtml",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\AdminTags\\List.cshtml",
+              "RelativeToolTip": "Bloggie.MVC\\Views\\AdminTags\\List.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAB3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-30T09:56:08.29Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CloudinaryImageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Repositories\\CloudinaryImageRepository.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Repositories\\CloudinaryImageRepository.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Repositories\\CloudinaryImageRepository.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Repositories\\CloudinaryImageRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T10:18:21.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Program.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Program.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Program.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T06:12:16.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ImagesController.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Controllers\\ImagesController.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Controllers\\ImagesController.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Controllers\\ImagesController.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Controllers\\ImagesController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAowCIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T09:52:07.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IImageRespository.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Repositories\\IImageRespository.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Repositories\\IImageRespository.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Repositories\\IImageRespository.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Repositories\\IImageRespository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T10:12:37.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\AdminBlogPosts\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Views\\AdminBlogPosts\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\AdminBlogPosts\\Edit.cshtml",
+              "RelativeToolTip": "Bloggie.MVC\\Views\\AdminBlogPosts\\Edit.cshtml",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAwEQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-08T07:15:41.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "List.cshtml",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\AdminBlogPosts\\List.cshtml",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Views\\AdminBlogPosts\\List.cshtml",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\AdminBlogPosts\\List.cshtml",
+              "RelativeToolTip": "Bloggie.MVC\\Views\\AdminBlogPosts\\List.cshtml",
+              "ViewState": "AgIAABYAAAAAAAAAAAApwCgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-07T07:39:29.282Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\AdminBlogPosts\\Add.cshtml",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Views\\AdminBlogPosts\\Add.cshtml",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\AdminBlogPosts\\Add.cshtml",
+              "RelativeToolTip": "Bloggie.MVC\\Views\\AdminBlogPosts\\Add.cshtml",
+              "ViewState": "AgIAACMAAAAAAAAAAAApwBgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-03T05:28:29.886Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\AdminTags\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Views\\AdminTags\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\AdminTags\\Edit.cshtml",
+              "RelativeToolTip": "Bloggie.MVC\\Views\\AdminTags\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-31T12:06:44.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "EditBlogPostsRequest.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Models\\ViewModels\\EditBlogPostsRequest.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Models\\ViewModels\\EditBlogPostsRequest.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Models\\ViewModels\\EditBlogPostsRequest.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Models\\ViewModels\\EditBlogPostsRequest.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAswBgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T07:22:17.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AddTagRequest.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Models\\ViewModels\\AddTagRequest.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Models\\ViewModels\\AddTagRequest.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Models\\ViewModels\\AddTagRequest.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Models\\ViewModels\\AddTagRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T03:31:30.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "TagRepository.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Repositories\\TagRepository.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Repositories\\TagRepository.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Repositories\\TagRepository.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Repositories\\TagRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAhwBoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T11:08:43.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BloggieDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Data\\BloggieDbContext.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Data\\BloggieDbContext.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Data\\BloggieDbContext.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Data\\BloggieDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T06:22:00.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AddBlogPostsRequest.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Models\\ViewModels\\AddBlogPostsRequest.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Models\\ViewModels\\AddBlogPostsRequest.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Models\\ViewModels\\AddBlogPostsRequest.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Models\\ViewModels\\AddBlogPostsRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-03T05:36:22.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "EditTagRequest.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Models\\ViewModels\\EditTagRequest.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Models\\ViewModels\\EditTagRequest.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Models\\ViewModels\\EditTagRequest.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Models\\ViewModels\\EditTagRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T12:42:05.24Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "Bloggie.MVC\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T07:25:12.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "20250607072617_migration32.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Migrations\\20250607072617_migration32.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Migrations\\20250607072617_migration32.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Migrations\\20250607072617_migration32.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Migrations\\20250607072617_migration32.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-07T07:26:18.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ITagRepository.cs",
+              "DocumentMoniker": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Repositories\\ITagRepository.cs",
+              "RelativeDocumentMoniker": "Bloggie.MVC\\Repositories\\ITagRepository.cs",
+              "ToolTip": "C:\\Users\\2406766\\OneDrive - Cognizant\\Desktop\\Cognizant_Training\\Bloggie.MVC\\Bloggie.MVC\\Repositories\\ITagRepository.cs",
+              "RelativeToolTip": "Bloggie.MVC\\Repositories\\ITagRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T10:49:28.765Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

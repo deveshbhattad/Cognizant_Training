@@ -1,0 +1,120 @@
+﻿@model TMS_MAIN.ViewModels.AdminReportsViewModel
+
+@{
+    ViewData["Title"] = "Treasurer Reports"; // Set the page title
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section Styles {
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=wrap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="~/css/treasurer-dashboard.css" rel="stylesheet" />
+    <style>
+        /* ✅ Navbar Styling */
+        .navbar {
+            background-color: #343a40 !important;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        .navbar-title {
+            color: white !important;
+            font-size: 1.5rem;
+            margin-left: 30px;
+        }
+
+        #box {
+            padding: 20px;
+            margin-top: 80px; /* Space below navbar */
+        }
+
+        #bb {
+            padding-left:20px;
+            padding-right:30px;
+        }
+    </style>
+}
+
+
+<div id="box" class="container-fluid">
+    <br />
+
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Treasurer Reports</h6>
+        </div>
+        <div class="card-body">
+            <form asp-action="AdminReports" method="post">
+                <div class="form-group" id="bb">
+                    <label asp-for="FilterModel.SelectedUserId" class="control-label font-weight-bold">Select Treasurer</label>
+                    <select asp-for="FilterModel.SelectedUserId" asp-items="Model.FilterModel.Users" class="form-control">
+                        <option value="">-- Select Treasurer --</option>
+                    </select>
+                </div>
+                <br />
+                <center> 
+                <button type="submit" class="btn btn-sm btn-primary">View Reports</button>
+                </center>
+            </form>
+
+            @if (Model.Reports != null && Model.Reports.Any())
+            {
+                <div class="table-responsive mt-4">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Report Name</th>
+                                <th>Module</th>
+                                <th>Date Range</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var report in Model.Reports)
+                            {
+                                <tr>
+                                    <td>@report.ReportName</td>
+                                    <td>@report.Module</td>
+                                    <td>@report.StartDate.ToShortDateString() - @report.EndDate.ToShortDateString()</td>
+                                    <td>
+                                        <span class="badge @GetStatusBadge(report.Status)">
+                                            @report.Status
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("ViewAdminReport", new { id = report.ReportId })"
+                                           class="btn btn-sm btn-info">
+                                            View
+                                        </a>
+                                            @* <a href="@Url.Action("PrintReport","Admin", new { id = report.ReportId })" *@
+                                            @*    class="btn btn-sm btn-primary" target="_blank"> *@
+                                            @*      Print Report *@
+                                            @* </a> *@
+                                      
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+@functions {
+    string GetStatusBadge(string status)
+    {
+        return status switch
+        {
+            "Generated" => "bg-secondary", // Using Bootstrap 5 classes
+            "Viewed" => "bg-info",       // Using Bootstrap 5 classes
+            _ => "bg-success"             // Using Bootstrap 5 classes
+        };
+    }
+}

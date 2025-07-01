@@ -1,0 +1,111 @@
+﻿@model Investment
+
+@{
+    ViewData["Title"] = "Edit Investment";
+    Layout = "~/Views/Shared/_TreasurerLayout.cshtml";
+}
+
+@section Styles {
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=wrap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> @* Added for 'bi bi-arrow-left' icon *@
+    <link href="~/css/treasurer-dashboard.css" rel="stylesheet" />
+
+    <style>
+        /* Navbar Styling from your original commented out section, made active */
+        .navbar {
+            background-color: #343a40 !important;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        .navbar-title { /* This class is not used in your current HTML but kept for reference */
+            color: white !important;
+            font-size: 1.5rem;
+            margin-left: 30px;
+        }
+
+        #box {
+            padding: 20px;
+            margin-top: 300px;
+            margin-bottom: 20px; /* Space below navbar */
+        }
+    </style>
+}
+
+<br />
+<br />
+<br />
+
+<div id="box" class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg">
+                <div class="card-header">
+                    <h2 class="text-center">Edit Investment</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Edit">
+                        <div class="form-group">
+                            <label asp-for="InvestmentId" class="form-label"></label>
+                            <input asp-for="InvestmentId" class="form-control" />
+                            <span asp-validation-for="InvestmentId" class="text-danger"></span>
+                        </div>
+                        @* <div class="form-group"> *@
+                        @*     <label asp-for="InvestmentType" class="form-label"></label> *@
+                        @*     <input asp-for="InvestmentType" class="form-control" /> *@
+                        @*     <span asp-validation-for="InvestmentType" class="text-danger"></span> *@
+                        @* </div> *@
+                        <div class="form-group">
+                            <label asp-for="InvestmentType" class="form-label"></label>
+                            <select asp-for="InvestmentType" class="form-control">
+                                <option value="">-- Select Investment Type --</option>
+                                <option value="Bonds">Bonds</option>
+                                <option value="Equities">Equities</option>
+                                <option value="MutualFunds">MutualFunds</option>
+                            </select>
+                            <span asp-validation-for="InvestmentType" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="AmountInvested" class="form-label"></label>
+                            <input asp-for="AmountInvested" class="form-control" />
+                            <span asp-validation-for="AmountInvested" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="CurrentValue" class="form-label"></label>
+                            <input asp-for="CurrentValue" class="form-control" />
+                            <span asp-validation-for="CurrentValue" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PurchaseDate" class="form-label"></label>
+                            <input asp-for="PurchaseDate" class="form-control" />
+                            <span asp-validation-for="PurchaseDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="MaturityDate" class="form-label"></label>
+                            <input asp-for="MaturityDate" class="form-control" />
+                            <span asp-validation-for="MaturityDate" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-center">
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center">
+                    <a asp-action="Index" class="btn btn-dark">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/treasurer-dashboard.js"></script>
+}
